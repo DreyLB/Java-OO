@@ -1,13 +1,9 @@
-public class Conta{
-    public int numConta;
-    protected int tipo;
-    private String dono;
-    private double saldo;
-    private boolean status;
-    public void abrirConta();
+interface Conta{
+
+    public void abrirConta(String nome, int tipo);
     public void fecharConta();
-    public void depositar();
-    public void sacar();
+    public void depositar(double valor);
+    public void sacar(double saque);
     public void pagarMensal();
 
 }
