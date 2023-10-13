@@ -5,5 +5,8 @@ public class Main {
         conta.depositar(1450);
         conta.sacar(100);
         conta.status();
+        conta.sacar(1500 );
+        conta.fecharConta();
+        conta.status();
     }
 }

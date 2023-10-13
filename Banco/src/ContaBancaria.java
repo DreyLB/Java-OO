@@ -26,7 +26,7 @@ public class ContaBancaria implements Conta {
             System.out.println("Não foi possível realizar a operação");
         }
         else {
-            System.out.println("contaBancaria.Conta " + this.numConta + "encerrada");
+            System.out.println("\nConta Bancaria " + this.numConta + " encerrada\n");
             this.status = false;
         }
     }
