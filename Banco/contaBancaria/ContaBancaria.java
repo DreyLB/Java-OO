@@ -1,14 +1,20 @@
+package contaBancaria;
+
 class ContaBancaria implements Conta {
 
-    private int numConta;
+    private final int numConta;
     protected int tipo;
     private String dono;
     private double saldo;
     private boolean status;
 
+    ContaBancaria(int numConta) {
+        this.numConta = numConta;
+    }
+
     public void abrirConta(String nome, int tipo) {
         this.dono = nome;
-        if (tipo == 1) { // 1 Conta corrente - 2 Conta poupança
+        if (tipo == 1) { // 1 contaBancaria.Conta corrente - 2 contaBancaria.Conta poupança
             this.tipo = tipo;
             this.saldo = 50;
         } else if (tipo == 2) {
@@ -23,13 +29,13 @@ class ContaBancaria implements Conta {
             System.out.println("Não foi possível realizar a operação");
         }
         else {
-            System.out.println("Conta " + this.numConta + "encerrada");
-            this.status = false
+            System.out.println("contaBancaria.Conta " + this.numConta + "encerrada");
+            this.status = false;
         }
     }
 
     public void depositar(double valor) {
-        if (this.status == false) {
+        if (!this.status) {
             System.out.println("A conta esta fechada");
             return;
         }
@@ -38,7 +44,7 @@ class ContaBancaria implements Conta {
     }
 
     public void sacar(double saque) {
-        if (this.status == false) {
+        if (!this.status) {
             System.out.println("A conta esta fechada");
             return;
         }else {
@@ -50,15 +56,15 @@ class ContaBancaria implements Conta {
                     this.saldo -= saque;
                     System.out.println("Você utilizou R$" + this.saldo + "do Cheque Especial");
                 } else {
-                    System.out.println("Conta poupança não tem Cheque Especial");
+                    System.out.println("contaBancaria.Conta poupança não tem Cheque Especial");
                 }
             }
         }
     }
 
     public void pagarMensal() {
-        if(this.status == true){
-            if(this.tipo = 1){
+        if(this.status){
+            if(this.tipo == 1){
                 this.saldo -= 12.0;
             }
             else {
@@ -82,7 +88,7 @@ class ContaBancaria implements Conta {
 
         System.out.println("Saldo: " + this.saldo);
 
-        if(this.status == true){
+        if(this.status){
             System.out.println("Status: Aberta");
         }
         else {

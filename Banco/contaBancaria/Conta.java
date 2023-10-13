@@ -1,3 +1,5 @@
+package contaBancaria;
+
 interface Conta{
 
     public void abrirConta(String nome, int tipo);
