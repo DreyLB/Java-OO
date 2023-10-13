@@ -1,7 +1,4 @@
-package contaBancaria;
-
-class ContaBancaria implements Conta {
-
+public class ContaBancaria implements Conta {
     private final int numConta;
     protected int tipo;
     private String dono;
@@ -16,9 +13,9 @@ class ContaBancaria implements Conta {
         this.dono = nome;
         if (tipo == 1) { // 1 contaBancaria.Conta corrente - 2 contaBancaria.Conta poupança
             this.tipo = tipo;
-            this.saldo = 50;
+            this.saldo = 50.00;
         } else if (tipo == 2) {
-            this.saldo = 150;
+            this.saldo = 150.00;
         }
         this.status = true;
         System.out.println("Seja bem-vindo ao Banco Java, " + this.dono);
@@ -86,7 +83,7 @@ class ContaBancaria implements Conta {
 
         System.out.println("Dono: " + this.dono);
 
-        System.out.println("Saldo: " + this.saldo);
+        System.out.println("Saldo: R$" + this.saldo);
 
         if(this.status){
             System.out.println("Status: Aberta");
