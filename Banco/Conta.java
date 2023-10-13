@@ -5,5 +5,6 @@ interface Conta{
     public void depositar(double valor);
     public void sacar(double saque);
     public void pagarMensal();
+    public void status();
 
 }
