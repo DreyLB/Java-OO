@@ -10,7 +10,7 @@ public class Data
         mes = j;
         ano = i;
         int[] diasPorMes = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        if (mes < 1 ||dia > diasPorMes[mes] || mes>12) {
+        if (mes < 1 || dia > diasPorMes[mes]) {
             dia = 1;
             mes = 1;
             ano = 1900;
@@ -50,7 +50,7 @@ public class Data
             }
         }
 
-        if (novoDia > diasPorMes[novoMes] || novoMes < 1 || novoMes > 12 || novoDia < 1  ) {
+        if (novoDia > diasPorMes[novoMes] || novoMes < 1 || novoDia < 1) {
             return new Data(1900, 1, 1);
         }
 
