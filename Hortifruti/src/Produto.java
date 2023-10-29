@@ -1,5 +1,8 @@
 public abstract class Produto {
-    private int qtde;
+
+    private int qtde = 0;
+
+    public abstract double getPreco();
 
     public int getQtde() {
         return qtde;
