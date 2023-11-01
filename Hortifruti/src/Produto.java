@@ -2,7 +2,10 @@ public abstract class Produto {
 
     private int qtde = 0;
 
+    public abstract String getNome();
+
     public abstract double getPreco();
+
 
     public int getQtde() {
         return qtde;

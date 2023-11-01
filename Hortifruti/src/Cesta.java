@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Cesta {
     private ArrayList<Produto> produtos;
@@ -31,9 +32,13 @@ public class Cesta {
     }
 
     public void listarCesta(){
-        Produto[] aux = new Produto[7];
+        int[] aux = {0,0,0,0,0,0,0};
 
 
-
+        for (Produto produto : this.produtos) {
+            if (Objects.equals(produto.getNome(), "Banana")) {
+                aux[0]++;
+            }
+        }
     }
 }
